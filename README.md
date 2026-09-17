@@ -21,3 +21,7 @@ The full Unity project source is maintained outside this repo.
 ## Tech
 
 Unity 6 LTS · URP · WebGL · three.js (prototype)
+
+## Sibling project
+
+[Pfand Rush](https://github.com/ravidvr/pfand-rush) — a 2D, single-file HTML5 lane runner in the same Pfand universe (Canvas 2D, zero dependencies). Play: https://ravidvr.github.io/pfand-rush/
