@@ -1,0 +1,23 @@
+name: CI
+
+on:
+  push:
+  pull_request:
+
+jobs:
+  syntax:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: JS syntax check (three.js prototype + page)
+        run: |
+          node --check src/game.js
+          python3 - <<'EOF'
+          import re, subprocess, sys
+          html = open("index.html", encoding="utf-8").read()
+          js = "\n".join(re.findall(r"<script[^>]*>(.*?)</script>", html, re.DOTALL))
+          open("/tmp/check.js", "w", encoding="utf-8").write(js)
+          r = subprocess.run(["node", "--check", "/tmp/check.js"], capture_output=True, text=True)
+          print(r.stdout or r.stderr)
+          sys.exit(r.returncode)
+          EOF
