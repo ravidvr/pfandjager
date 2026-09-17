@@ -1,5 +1,7 @@
 # Pfandjäger — Berlin Pfand-bottle endless runner
 
+[![CI](https://github.com/ravidvr/pfandjager/actions/workflows/ci.yml/badge.svg)](https://github.com/ravidvr/pfandjager/actions/workflows/ci.yml)
+
 A 3D lane-runner set in a Berlin U-Bahn night world: collect Pfand bottles, dodge obstacles, chain combos and near-misses for the high score. Gameplay quality is scored against a fixed Subway-Surfers benchmark rubric ([QUALITY.md](QUALITY.md)).
 
 **Play in the browser:** https://ravidvr.github.io/pfandjager/
